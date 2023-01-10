@@ -14,3 +14,12 @@ illustrate some of the power of OOP (and also some of the pitfalls)
     ○ Has been reviewed by many senior developers \
 ● With practice you will recognize the patterns in existing code \
 ● And hopefully remember to use them in new code 👍
+
+## Patterns we will cover
+1. Strategy 
+2. Adapter 
+3. Decorator 
+4. Optional 
+5. Singleton 
+6. Factory 
+7. Observer
