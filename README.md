@@ -8,9 +8,9 @@
 illustrate some of the power of OOP (and also some of the pitfalls)
 
 ## How do Design Patterns help developers?
-● Pattern gives name/vocabulary for communication of intent \
+● Pattern gives name/vocabulary for communication of intent  
     ○ No need to explain details in e.g., code reviews \
-● Provides as a “template” a worked-out “best practices” solution for you  \
+● Provides as a “template” a worked-out “best practices” solution for you  
     ○ Has been reviewed by many senior developers \
 ● With practice you will recognize the patterns in existing code \
 ● And hopefully remember to use them in new code 👍
@@ -23,3 +23,26 @@ illustrate some of the power of OOP (and also some of the pitfalls)
 5. Singleton 
 6. Factory 
 7. Observer
+
+## 3. Decorator 
+Component: The Component defines the interface for objects that can have responsibilties added dynamically \
+ConcreteComponent: It is simply an implementation of Component interface \
+Decorator: The Decorator has a reference to a Component, and also conforms to the Component interface. Decorator is essentially wrapping the Component \
+ConcreteDecorator: The ConcreteDecorator just adds responsibilities to the original Component. 
+
+Problems with Inheritance
+● Static, Single Relationship ○ Defined at Compile-time, can’t customise at runtime \
+● Inheritance based Coupling \
+● Misuse of Inheritance ○ Inheritance implies: Latte is an Espresso - not true \
+
+The most common relationships between classes are \
+• Dependence (“uses–a”) \
+• Inheritance (“is–a”) \
+Object itself does the work.
+• Aggregation (“has–a”) \
+Object delegates the work through reference to others and alter the result.
+
+How can we add state or methods at runtime?\
+Enables more flexible addition of behaviour, not hard-bounding\
+● Subclassing is compile-time (eg: custom coffee types)\
+● Subclassing is single-inheritance
