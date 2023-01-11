@@ -8,11 +8,6 @@ ConcreteComponent: It is simply an implementation of Component interface \
 Decorator: The Decorator has a reference to a Component, and also conforms to the Component interface. Decorator is essentially wrapping the Component \
 ConcreteDecorator: The ConcreteDecorator just adds responsibilities to the original Component. 
 
-Problems with Inheritance \
-● Static, Single Relationship ○ Defined at Compile-time, can’t customise at runtime \
-● Inheritance based Coupling \
-● Misuse of Inheritance ○ Inheritance implies: Latte is an Espresso - not true 
-
 The most common relationships between classes are \
 • Dependence (“uses–a”) \
 • Inheritance (“is–a”) \
@@ -20,20 +15,27 @@ Object itself does the work.\
 • Aggregation (“has–a”) \
 Object delegates the work through reference to others and alter the result.
 
-How can we add state or methods at runtime?\
-Enables more flexible addition of behaviour, not hard-bounding\
-● Subclassing is compile-time (eg: custom coffee types)\
-● Subclassing is single-inheritance
+Problems with Inheritance \
+● Static, Single Relationship \
+○ Defined at Compile-time, can’t customise at runtime \
+● Inheritance based Coupling \
+● Misuse of Inheritance ○ Inheritance implies: Latte is an Espresso - not true 
+
+Aggregation
+Add state or methods at runtime\
+Enables more flexible addition of behaviour, not hard-bounding \
+Combining multiple behaviours
 */
 
 public class Decorator{
     //compile-time
-    public interface Coffee { //Component
+    public interface Coffee { 
+        //Component
         double getCost();
         void make();
     }
-    public class CoffeeMug implements Coffee  //Concrete Component
-    {
+    public class CoffeeMug implements Coffee { 
+        //Concrete Component
         public double getCost(){
             return 0; 
         }
@@ -41,9 +43,10 @@ public class Decorator{
             System.out.println("Get a mug");
         }
     }
-    public class WithEspressoShot implements Coffee  //Decorator
-    {
+    public class WithEspressoShot implements Coffee{  
+        //Decorator
         private final Coffee coffee;
+        // inaccessible to other classes, can't be overwritten
         public WithEspressoShot(final Coffee coffee)
         {
             this.coffee = coffee;
@@ -60,8 +63,8 @@ public class Decorator{
             System.out.println("Pull Espresso Shot");
         }
     }
-    public class WithSteamedAlmondMilk implements Coffee  // Another similar Decorator
-    {
+    public class WithSteamedAlmondMilk implements Coffee {
+        // Another similar Decorator
         private final Coffee coffee;
         public WithSteamedAlmondMilk(final Coffee coffee)
         {
