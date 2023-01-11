@@ -22,7 +22,7 @@ public class Singleton_multithreaded {
     //
     // You can read more info DCL issues in Java here:
     // https://refactoring.guru/java-dcl-issue
-            Singleton result = instance;
+            Singleton result = instance;  // mine
             if (result != null) {
                 return result;
             }
