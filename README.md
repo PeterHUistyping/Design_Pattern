@@ -17,22 +17,40 @@ illustrate some of the power of OOP (and also some of the pitfalls)
 
 ## Patterns we will cover
 1. Singleton
-2. Adapter
-3. Decorator  
-4. Observer 
-5. Composite 
-6. State
-7. Strategy   
-8. Factory
+2. Factory
+3. Adapter
+4. Decorator  
+5. Observer 
+6. Composite 
+7. State
+8. Strategy   
 9. Optional 
  
 ## 1. Singleton 
+[Code Here](./Singleton_single_threaded.java) \
 Only one instance of an object is created by developers using our code \
     Ex. a class that encapsulates accessing a database over a network with only one connection at a time. \
 Provide a global access point to that instance. \
 Include solution to multi-threaded problems.
 
-## 2. Adapter 
+## 2. Factory
+[Code Here](./Factory.java) \
+new “considered harmful” 
+
+Factory Method is a creational design pattern that provides an interface for creating objects in a
+superclass, but allows subclasses to alter the type of objects that will be created.
+
+Avoid tight coupling between the creator and the concrete products.
+
+The **Product** declares the interface, which is common to all objects that can be produced by the creator and its subclasses.\
+**Concrete Products** are different implementations of the product interface.\
+The **Creator** class declares the factory method that returns new product objects. It’s
+important that the return type of this method matches the product interface.\
+**Concrete Creators** override the base factory method so it returns a different type of product. \
+Note that the factory method doesn’t have to create new instances all the time. It can also return existing objects from a cache, an object pool, or another source.
+
+## 3. Adapter 
+[Code Here](./Adapter.java) \
 Introduce a bridge between two incompatible interfaces.
 
 **Target**: The Interface / class that the rest of your code is going to use. \
@@ -40,7 +58,8 @@ Introduce a bridge between two incompatible interfaces.
 Often 3rd-party, legacy or with lots of existing dependencies.\
 **Adapter**: The class that will adapt method calls from the target to the Adaptee. 
 
-## 3. Decorator 
+## 4. Decorator 
+[Code Here](./Decorator.java) \
 The most common relationships between classes are \
 • Dependence (“uses–a”) \
 • Inheritance (“is–a”) \
@@ -64,12 +83,14 @@ Combining multiple behaviours
 **Decorator**: The Decorator has a reference to a Component, and also conforms to the Component interface. Decorator is essentially wrapping the Component \
 **ConcreteDecorator**: The ConcreteDecorator just adds responsibilities to the original Component. 
 
-## 4. Observer
+## 5. Observer
+[Code Here](./Observer.java) \
  Define a 1:M dependency between objects so that when one object changes state, all its dependents are notified automatically \
 ● Enables decoupling between publisher and subscriber \
 ● Enables dynamic attachment/removal of subscribers 
 
-## 5. Composite
+## 6. Composite
+[Code Here](./Composite.java) \
 How can we treat a group of objects as a single object? \
 Composite is a structural design pattern that lets you compose objects into tree structures and
 then work with these structures as if they were individual objects.
@@ -83,23 +104,12 @@ A container doesn’t know the concrete classes of its children.
 It delegates all the work to sub-elements only via the component interface.
 
 
-## 6. State
-## 7. Strategy   
+## 7. State
+[Code Here](./State.java) \
+## 8. Strategy   
+[Code Here](./Strategy.java) \
 
 
-## 8. Factory
-new “considered harmful” 
-
-Factory Method is a creational design pattern that provides an interface for creating objects in a
-superclass, but allows subclasses to alter the type of objects that will be created.
-
-Avoid tight coupling between the creator and the concrete products.
-
-The **Product** declares the interface, which is common to all objects that can be produced by the creator and its subclasses.\
-**Concrete Products** are different implementations of the product interface.\
-The **Creator** class declares the factory method that returns new product objects. It’s
-important that the return type of this method matches the product interface.\
-**Concrete Creators** override the base factory method so it returns a different type of product. \
-Note that the factory method doesn’t have to create new instances all the time. It can also return existing objects from a cache, an object pool, or another source.
 
 ## 9. Optional 
+[Code Here](./Optional.java) \
