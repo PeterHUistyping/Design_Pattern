@@ -19,7 +19,7 @@ Problems with Inheritance \
 ● Static, Single Relationship \
 ○ Defined at Compile-time, can’t customise at runtime \
 ● Inheritance based Coupling \
-● Misuse of Inheritance ○ Inheritance implies: Latte is an Espresso - not true 
+● Misuse of Inheritance, Inheritance implies: Latte is an Espresso - not true 
 
 Aggregation
 Add state or methods at runtime\
