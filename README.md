@@ -88,4 +88,18 @@ It delegates all the work to sub-elements only via the component interface.
 
 
 ## 8. Factory
+new “considered harmful” 
+
+Factory Method is a creational design pattern that provides an interface for creating objects in a
+superclass, but allows subclasses to alter the type of objects that will be created.
+
+Avoid tight coupling between the creator and the concrete products.
+
+The **Product** declares the interface, which is common to all objects that can be produced by the creator and its subclasses.\
+**Concrete Products** are different implementations of the product interface.\
+The **Creator** class declares the factory method that returns new product objects. It’s
+important that the return type of this method matches the product interface.\
+**Concrete Creators** override the base factory method so it returns a different type of product. \
+Note that the factory method doesn’t have to create new instances all the time. It can also return existing objects from a cache, an object pool, or another source.
+
 ## 9. Optional 
