@@ -45,7 +45,7 @@ Avoid tight coupling between the creator and the concrete products.
 The **Product** declares the interface, which is common to all objects that can be produced by the creator and its subclasses.\
 **Concrete Products** are different implementations of the product interface.\
 The **Creator** class declares the factory method that returns new product objects. It’s
-important that the return type of this method matches the product interface.\
+important that the return type of this method matches the product interface. Dependence (“uses–a” product) \
 **Concrete Creators** override the base factory method so it returns a different type of product. \
 Note that the factory method doesn’t have to create new instances all the time. It can also return existing objects from a cache, an object pool, or another source.
 
