@@ -1,7 +1,8 @@
 /*
- Only one instance of an object is created by developers using our code
- Ex. a class that encapsulates accessing a database over a network with only one connection at a time.
- Provide a global access point to that instance.
+ Only one instance of an object is created by developers using our code \
+    Ex. a class that encapsulates accessing a database over a network with only one connection at a time. \
+Provide a global access point to that instance. \
+Include solution to multi-threaded problems.
  */
 public class Singleton_single_threaded {
     public static final class Singleton {  // static used for inner class

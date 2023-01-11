@@ -3,10 +3,10 @@
 // import java.util.zip.ZipInputStream;
 
 /*
-Component: The Component defines the interface for objects that can have responsibilties added dynamically \
-ConcreteComponent: It is simply an implementation of Component interface \
-Decorator: The Decorator has a reference to a Component, and also conforms to the Component interface. Decorator is essentially wrapping the Component \
-ConcreteDecorator: The ConcreteDecorator just adds responsibilities to the original Component. 
+**Component**: The Component defines the interface for objects that can have responsibilties added dynamically \
+**ConcreteComponent**: It is simply an implementation of Component interface \
+**Decorator**: The Decorator has a reference to a Component, and also conforms to the Component interface. Decorator is essentially wrapping the Component \
+**ConcreteDecorator**: The ConcreteDecorator just adds responsibilities to the original Component. 
 
 The most common relationships between classes are \
 • Dependence (“uses–a”) \
