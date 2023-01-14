@@ -106,10 +106,14 @@ It delegates all the work to sub-elements only via the component interface.
 
 ## 7. State
 [Code Here](./State.java) \
+ Let an object alter its behaviour when its internal state changes. \
+ It appears as if the object changed its class. (finite number of states)
+
 ## 8. Strategy   
 [Code Here](./Strategy.java) \
-
+Lets you define a family of algorithms, put each of
+them into a separate class, and make their objects interchangeable.
 
 
 ## 9. Optional 
-[Code Here](./Optional.java) \
+[Code Here](./OptionalDemo.java) \
