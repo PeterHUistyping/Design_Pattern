@@ -12,7 +12,7 @@ new “considered harmful”
 Factory Method is a creational design pattern that provides an interface for creating objects in a
 superclass, but allows subclasses to alter the type of objects that will be created.
 
-Avoid tight coupling between the creator and the concrete products.Avoid tight coupling between the creator and the concrete products.
+Avoid tight coupling between the creator and the concrete products.
 
 The **Product** declares the interface, which is common to all objects that can be produced by the creator and its subclasses.\
 **Concrete Products** are different implementations of the product interface.\
