@@ -30,17 +30,30 @@ illustrate some of the power of OOP (and also some of the pitfalls)
 
 9.  Optional    (Exception)
  
-## Summary
-3, 4 , 6 are all wrappers. (Structural)
-3 wraps A to B ( different inheritance tree ).
-4 wraps A to A.
-6 wraps a group of A and A.
+## Compare and Contrast
+1, 2 are all Creational patterns.
+1. Singleton stores a private static final instance and lazy instantiates it.
+2. Factory Design is using class method to replace new, Factory has a method createInstance for different subtypes.
 
-5, 7, 8 are all Behavioural patterns.
-5 identifies common communication patterns between objects.
-[A publisher vs a list of observers 1:M]
-7 changes its type at runtime
-8 select Algorithms on the fly, using composition.
+3, 4 , 6 are all wrappers. (Structural) 
+They are all achieved by using composition (in adapter, decorator and composite).
+3. Adapter wraps A to B ( different inheritance tree ). 
+   Composition of service.
+4. Decorator wraps A to A. 
+   Composition of component interface.
+6. Composite wraps a group of A and A.
+   Composition of component interface. 
+
+5, 7, 8 are all Behavioural patterns. (State, Method and Communication)
+They are all achieved by using composition (in the context at least).
+5. Observer identifies common communication patterns between objects.
+[A publisher vs a list of observers 1:M, Composition]
+7. State changes its state (composition) at runtime
+8. Strategy selects Algorithms (composition) on the fly.
+
+Design Pattern Meaning:
+Open for extension, Closed for modification.
+There is no need to achieve the above ... functionality by changing existing code.
 
 ## 1. Singleton 
 [Code Here](./Singleton_single_threaded.java) \
@@ -52,6 +65,8 @@ Include solution to multi-threaded problems.
 ## 2. Factory
 [Code Here](./Factory.java) \
 new “considered harmful” 
+
+So Factory Design is using class method to replace new, Factory has a method createInstance for different subtypes.
 
 Factory Method is a creational design pattern that provides an interface for creating objects in a
 superclass, but allows subclasses to alter the type of objects that will be created.
