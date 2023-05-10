@@ -16,15 +16,19 @@ illustrate some of the power of OOP (and also some of the pitfalls)
 ● And hopefully remember to use them in new code 👍
 
 ## Patterns we will cover
-1. Singleton
-2. Factory
-3. Adapter
-4. Decorator  
-5. Observer 
-6. Composite 
-7. State
-8. Strategy   
-9. Optional 
+1. Singleton    (Creational)
+2. Factory      (Creational) 
+   
+3. Adapter      (Structural) 
+4. Decorator    (Structural) 
+   
+5. Observer     (Behavioural)
+6. Composite    (Structural) 
+   
+7. State        (Behavioural)
+8. Strategy     (Behavioural) 
+
+9.  Optional    (Exception)
  
 ## 1. Singleton 
 [Code Here](./Singleton_single_threaded.java) \
