@@ -30,17 +30,17 @@ illustrate some of the power of OOP (and also some of the pitfalls)
 
 9.  Optional    (Exception)
  
-
-So 3, 4 , 6 are all wrappers. (Structural)
-3 wraps A to B ( different inheritance tree )
-4 wraps A to A
-6 wraps a group of A and A
+## Summary
+3, 4 , 6 are all wrappers. (Structural)
+3 wraps A to B ( different inheritance tree ).
+4 wraps A to A.
+6 wraps a group of A and A.
 
 5, 7, 8 are all Behavioural patterns.
 5 identifies common communication patterns between objects.
 [A publisher vs a list of observers 1:M]
 7 changes its type at runtime
-8 select Algorithms on the fly, using composition
+8 select Algorithms on the fly, using composition.
 
 ## 1. Singleton 
 [Code Here](./Singleton_single_threaded.java) \
