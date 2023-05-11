@@ -33,15 +33,17 @@ illustrate some of the power of OOP (and also some of the pitfalls)
 ## Compare and Contrast
 1, 2 are all Creational patterns.
 1. Singleton stores a private static final instance and lazy instantiates it.
+    Composition of singleton
 2. Factory Design is using class method to replace new, Factory has a method createInstance for different subtypes.
+    Composition of the main class (usually with derived class)
 
 3, 4 , 6 are all wrappers. (Structural) 
 They are all achieved by using composition (in adapter, decorator and composite).
-3. Adapter wraps A to B ( different inheritance tree ). 
+1. Adapter wraps A to B ( different inheritance tree ). 
    Composition of service.
-4. Decorator wraps A to A. 
+2. Decorator wraps A to A*. 
    Composition of component interface.
-6. Composite wraps a group of A and A.
+3. Composite wraps A to A[].
    Composition of component interface. 
 
 5, 7, 8 are all Behavioural patterns. (State, Method and Communication)
@@ -108,6 +110,9 @@ Aggregation
 Add state or methods at runtime\
 Enables more flexible addition of behaviour, not hard-bounding \
 Combining multiple behaviours
+
+Problems: will be verbose and difficult due to the wrapper.
+Need to aggregate another object, adding up to the complexity.
 
 **Component**: The Component defines the interface for objects that can have responsibilties added dynamically \
 **ConcreteComponent**: It is simply an implementation of Component interface \
